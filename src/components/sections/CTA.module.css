@@ -1,0 +1,112 @@
+.section {
+  padding: var(--space-24) var(--space-6);
+  background: var(--color-surface);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 400px;
+  background: radial-gradient(ellipse at center, rgba(108, 99, 255, 0.2) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.inner {
+  max-width: 680px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.icon {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 8px 32px rgba(108, 99, 255, 0.4);
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, var(--font-size-5xl));
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  color: var(--color-text-primary);
+}
+
+.gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-8);
+  background: var(--gradient-primary);
+  color: white;
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: 0 4px 24px rgba(108, 99, 255, 0.4);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(108, 99, 255, 0.5);
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-4) var(--space-8);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--color-border-subtle);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.btnSecondary:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.2);
+}
+
+.note {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}

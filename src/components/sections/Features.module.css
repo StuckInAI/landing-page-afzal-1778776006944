@@ -1,0 +1,112 @@
+.section {
+  padding: var(--space-24) var(--space-6);
+  background: var(--color-bg);
+  position: relative;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-16);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.pill {
+  display: inline-flex;
+  padding: var(--space-1) var(--space-4);
+  background: rgba(108, 99, 255, 0.12);
+  border: 1px solid rgba(108, 99, 255, 0.25);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary-light);
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, var(--font-size-5xl));
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  color: var(--color-text-primary);
+}
+
+.gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  max-width: 580px;
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.card {
+  padding: var(--space-8);
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base), background var(--transition-base);
+  cursor: default;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(var(--accent), 0.3);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  background: var(--color-bg-card-hover);
+}
+
+.iconWrap {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+}
+
+.cardTitle {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.cardDesc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
